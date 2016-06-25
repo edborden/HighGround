@@ -7,7 +7,7 @@ const {
 export default Route.extend({
 
   model() {
-    return this.store.findAll('location');
+    return this.store.findAll('spot');
   }
 
 });

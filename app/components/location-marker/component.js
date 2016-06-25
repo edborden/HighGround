@@ -1,10 +1,9 @@
-import MarkerLayer from 'current-truck/components/marker-layer';
-import observes from 'ember-computed-decorators';
+import MarkerLayer from 'high-ground/components/marker-layer';
 
 const EventMarker = L.Icon.extend({
 
   options: {
-    iconSize: [40, 40]
+    iconSize: [10, 10]
   },
 
   initialize(options) {
@@ -14,14 +13,14 @@ const EventMarker = L.Icon.extend({
   createIcon() {
     let div = document.createElement('div');
     div.className = 'location-marker';
-    div.innerHTML = this._createInner();
+    // div.innerHTML = this._createInner();
     this.element = div;
     return div;
   },
 
-  _createInner() {
-    return `${this.options.pedestriansCount}/${this.options.spotsCount}`;
-  }
+  // _createInner() {
+  //  return `${this.options.pedestriansCount}/${this.options.spotsCount}`;
+  // }
 
 });
 
@@ -29,23 +28,13 @@ export default MarkerLayer.extend({
 
   // attributes
   icon: null,
-  pedestriansCount: null,
-  spotsCount: null,
 
   // events
   init() {
     this._super();
-    let pedestriansCount = this.get('pedestriansCount');
-    let spotsCount = this.get('spotsCount');
-    let icon = new EventMarker({ pedestriansCount, spotsCount });
+    let icon = new EventMarker();
     this.set('icon', icon);
   },
-
-  updateCounts: Ember.observer('spotsCount', 'pedestriansCount', function() {
-    let pedestriansCount = this.get('pedestriansCount');
-    let spotsCount = this.get('spotsCount');
-    this.get('icon').element.innerHTML = `${pedestriansCount}/${spotsCount}`;
-  }),
 
   didCreateLayer() {
     // this._super(...arguments);
