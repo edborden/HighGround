@@ -1,0 +1,18 @@
+{
+  "firebase": "highgroundredhook",
+  "public": "./dist",
+  "rewrites": [
+    {
+      "source": "/tests",
+      "destination": "/tests/index.html"
+    },
+    {
+      "source": "/tests/**",
+      "destination": "/tests/index.html"
+    },
+    {
+      "source": "/**",
+      "destination": "/index.html"
+    }
+  ]
+}
