@@ -5,7 +5,7 @@ dependencies:
   pre:
     - npm install -g bower
     - npm install -g firebase-tools
-    - npm install -g ember-cli@2.6.0-beta.2
+    - npm install -g ember-cli@2.7.0-beta.4
   override:
     - npm i
     - bower i
