@@ -3,6 +3,7 @@
 write=nobody
 execute=authenticated 
   **/ 
+ 
  body = {
   id: "x",
   pedestrians_increment_count: 1,

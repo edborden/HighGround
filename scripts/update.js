@@ -3,6 +3,7 @@
 write=nobody
 execute=anonymous 
   **/ 
+ 
  var package = request.body;
 id = package.id;
 endpoint = "locations/" + id;
