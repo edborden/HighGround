@@ -23,7 +23,9 @@ export default Model.extend({
 
   @computed
   distanceFromMe() {
-    return locationDistanceFrom(this.get('geolocation'), this);
+    let meters = locationDistanceFrom(this.get('geolocation'), this);
+    let miles = meters * 0.000621371;
+    return Math.round(miles * 100) / 100;
   }
 
 });

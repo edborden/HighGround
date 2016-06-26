@@ -1,8 +1,13 @@
 <div class="text-center">
-  <p>You have been assigned a spot:</p>
-  <p>
+  <h4>You have been assigned a spot:</h4>
+  <h4>
     <a href="https://www.google.com/maps/place/{{model.lat}},{{model.lng}}">
-      Go there
+      <button class="btn btn-warning">
+        Go there
+      </button>
     </a>
-  </p>
+  </h4>
+  <h4>
+    It's {{model.distanceFromMe}} miles away.
+  </h4>
 </div>
