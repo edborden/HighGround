@@ -7,10 +7,17 @@
       Emergency Flood Parking not currently in effect.
     </h4>
     <div class="email-signup-form">
-      {{input type="text" value=email class="input-item" placeholder="Email address"}}
-      <a class="btn-floating btn-large {{unless isValid 'disabled'}}" {{action "subscribe"}}>
-        <i class="material-icons">mail</i>
-      </a>
+      <p>
+        {{input type="number" value=phone placeholder="Signup for alerts" class="phone-input"}}
+      </p>
+      <p>
+        <button class="btn btn-xs btn-warning" {{action "signup"}}>
+          Signup
+        </button>
+      </p>
+      <p>
+        {{feedback}}
+      </p>
     </div>
   </div>
 </div>
