@@ -8,7 +8,10 @@ const {
 export default Route.extend(ChecksStatus, {
 
   model() {
-    return this.store.findAll('spot');
+    return this.store.query('spot', {
+      orderBy: 'available',
+      equalTo: true
+    });
   }
 
 });

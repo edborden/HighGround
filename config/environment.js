@@ -8,6 +8,12 @@ module.exports = function(environment) {
     firebase: 'https://highgroundredhook.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: "AIzaSyAcXRjWE7qMjHHJEfR29MtGsM_wcmmpeOY",
+      authDomain: "highgroundredhook.firebaseapp.com",
+      databaseURL: "https://highgroundredhook.firebaseio.com",
+      storageBucket: "highgroundredhook.appspot.com",
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
