@@ -3,20 +3,11 @@ import MarkerLayer from 'high-ground/components/marker-layer';
 const EventMarker = L.Icon.extend({
 
   options: {
-    iconSize: [10, 10]
-  },
-
-  initialize(options) {
-    options = L.Util.setOptions(this, options);
-  },
-
-  createIcon() {
-    let div = document.createElement('div');
-    div.className = 'location-marker';
-    // div.innerHTML = this._createInner();
-    this.element = div;
-    return div;
-  },
+    iconUrl: "../images/dot.png",
+    iconSize: [10, 10],
+    iconAnchor: [5, 5],
+    className: "location-marker"
+  }
 
   // _createInner() {
   //  return `${this.options.pedestriansCount}/${this.options.spotsCount}`;

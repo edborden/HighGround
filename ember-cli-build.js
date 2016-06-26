@@ -34,6 +34,7 @@ module.exports = function(defaults) {
   app.import('bower_components/leaflet-usermarker/src/leaflet.usermarker.css');
   var leafletUserMarker = pickFiles('bower_components/leaflet-usermarker/src/img', {
       srcDir: '/',
+    destDir: 'assets/img/'
   });
 
   return mergeTrees([app.toTree(), fontAwesomeFonts, leafletUserMarker]);
