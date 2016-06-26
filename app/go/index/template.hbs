@@ -1,0 +1,26 @@
+<div class="text-center">
+  <h3>{{i-fa icon="map-marker" size="lg"}}
+  Use Location?</h3>
+  <div>
+    {{#unless error}}
+      <h5>In order to assign you the closest available spot, we need access to your location. This location information won't be stored and we won't share it with anyone.</h5>
+    {{else}}
+      <h5 class="color-red">{{error}}</h5>
+    {{/unless}}
+    {{#if waiting}}
+      {{i-fa size="4x" icon="cog" class="fa-spin"}}
+    {{/if}}
+    <button class="btn btn-lg btn-warning" {{action 'confirm'}}disabled={{waiting}}>
+      {{#if error}}
+        Retry
+      {{else}}
+        Confirm
+      {{/if}}
+    </button>
+    {{#if waiting}}
+      <button class="btn btn-lg btn-default" {{action 'cancel'}}>
+        Cancel
+      </button>
+    {{/if}}
+  </div>
+</div>
