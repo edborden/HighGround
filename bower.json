@@ -9,5 +9,8 @@
     "leaflet": "~0.7.7",
     "firebase": "^2.1.0",
     "phoneformat.js": "*"
+  },
+  "devDependencies": {
+    "components-font-awesome": "^4.6.3"
   }
 }

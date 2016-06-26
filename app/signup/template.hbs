@@ -9,7 +9,12 @@
     <div class="email-signup-form">
       {{#if display}}
         <p>
-          {{input type="number" value=phone placeholder="Signup for alerts" class="phone-input"}}
+          <div class="input-group">
+            <span class="input-group-addon">
+              {{i-fa icon="phone"}}
+            </span>
+            {{input type="number" value=phone placeholder="Phone" class="form-control"}}
+          </div>
         </p>
         <p>
           <button class="btn btn-xs btn-warning" {{action "signup"}}>

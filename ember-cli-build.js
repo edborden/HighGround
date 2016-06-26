@@ -16,9 +16,18 @@ module.exports = function(defaults) {
     }
   });
 
+  var pickFiles = require('broccoli-static-compiler');
+  var mergeTrees = require('broccoli-merge-trees');
+
   // PhoneFormat
   app.import('bower_components/phoneformat.js/dist/phone-format.js');
   app.import('bower_components/phoneformat.js/dist/phone-format-global.js');
 
-  return app.toTree();
+  // Font-Awesome
+  var fontAwesomeFonts = pickFiles('bower_components/components-font-awesome/fonts', {
+    srcDir: '/',
+    destDir: '/fonts'
+  });
+
+  return mergeTrees([app.toTree(), fontAwesomeFonts]);
 };

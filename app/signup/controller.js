@@ -1,10 +1,15 @@
+/* global PhoneFormat */
 import Ember from 'ember';
 
 const {
-  Controller
+  Controller,
+  inject: { service }
 } = Ember;
 
 export default Controller.extend({
+
+  //services
+  ajax: service(),
 
   // attributes
   phone: null,
@@ -19,11 +24,23 @@ export default Controller.extend({
       if ( valid ) {
         feedback = "You are signed up!";
         this.set('display', false);
+        this.signupPhone();
       } else {
         feedback = "Not a valid number a-hole";
       }
       this.set('feedback', feedback);
     }
+  },
+
+  signupPhone() {
+    let ajax = this.get('ajax');
+    ajax.request('https://edborden.scriptrapps.io/phone', {
+      method: 'POST',
+      data: "+1" + this.get('phone'),
+      headers: {
+        "content-type":"text"
+      }
+    });
   }
 
 });

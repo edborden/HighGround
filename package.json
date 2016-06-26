@@ -42,5 +42,9 @@
     "ember-resolver": "^2.0.3",
     "emberfire": "1.6.6",
     "loader.js": "^4.0.1"
+  },
+  "dependencies": {
+    "broccoli-merge-trees": "^1.1.1",
+    "broccoli-static-compiler": "^0.2.2"
   }
 }
