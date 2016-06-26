@@ -1,4 +1,5 @@
 <div class="top-half">
+
   {{#leaflet-map attributionControl=false zoomControl=false lat=40.6787 lng=-74.0134 zoom=16}}
     {{tile-layer url='https://{s}.tiles.mapbox.com/v3/edborden.0gfeg71f/{z}/{x}/{y}.png'}}
     {{#if located.success}}
@@ -8,6 +9,9 @@
       {{location-marker lat=spot.lat lng=spot.lng}}
     {{/each}}
   {{/leaflet-map}}
+  <div class="anchored-top">
+    There are {{model.length}} available spots.
+  </div>
 </div>
 <div class="bottom-half">
   {{outlet}}
