@@ -9,6 +9,7 @@ export default Controller.extend({
   // attributes
   phone: null,
   feedback: null,
+  display: true,
 
   actions: {
     signup() {
@@ -16,7 +17,8 @@ export default Controller.extend({
       let valid = PhoneFormat.isValidNumber(phone,'US');
       let feedback;
       if ( valid ) {
-        feedback = "Sweet";
+        feedback = "You are signed up!";
+        this.set('display', false);
       } else {
         feedback = "Not a valid number a-hole";
       }
