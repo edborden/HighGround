@@ -8,9 +8,8 @@
     "bootstrap": "^3.3.6",
     "leaflet": "~0.7.7",
     "firebase": "^2.1.0",
-    "phoneformat.js": "*"
-  },
-  "devDependencies": {
+    "phoneformat.js": "*",
+    "leaflet-usermarker": "https://github.com/heyman/leaflet-usermarker.git#master",
     "components-font-awesome": "^4.6.3"
   }
 }

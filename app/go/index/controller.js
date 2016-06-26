@@ -9,6 +9,7 @@ export default Controller.extend({
 
   // services
   geolocation: service(),
+  located: service(),
 
   // attributes
   error: null,
@@ -22,7 +23,7 @@ export default Controller.extend({
       let geolocation = this.get('geolocation');
       geolocation.init();
       geolocation.get('promise').then(() => {
-        localStorage.snaptagLocation = true;
+        this.get('located').set('success', true);
         this.transitionToRoute('go.location');
       }, (error) => {
         this.set('waiting', false);

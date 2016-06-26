@@ -29,5 +29,12 @@ module.exports = function(defaults) {
     destDir: '/fonts'
   });
 
-  return mergeTrees([app.toTree(), fontAwesomeFonts]);
+  // Leaflet User Marker
+  app.import('bower_components/leaflet-usermarker/src/leaflet.usermarker.js');
+  app.import('bower_components/leaflet-usermarker/src/leaflet.usermarker.css');
+  var leafletUserMarker = pickFiles('bower_components/leaflet-usermarker/src/img', {
+      srcDir: '/',
+  });
+
+  return mergeTrees([app.toTree(), fontAwesomeFonts, leafletUserMarker]);
 };
