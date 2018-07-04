@@ -1,44 +1,5 @@
 # HighGround
 
-Application that manages real-time availability of emergency flood parking spots.
-
-Consists of:
-* Ember frontend in /app
-* Scriptr.io scripts in /scripts
-
-## Prerequisites
-
-You will need the following things properly installed on your computer.
-
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Good example in circle.yml and firebase.json of a CI workflow for EmberJS using CircleCI and Firebase for hosting.
-
-# Use-Case Summary
-
 This past weekend I had the pleasure of participating in one of the most well-run, well-equipped, and well-intentioned hackathons that I've ever been a part of, <a href="https://pioneerworks.org/hack-red-hook/">Hack Red Hook</a> in Brooklyn, NYC. This was a civic hack aimed at bringing together local stakeholders in the community of Red Hook with technologists and designers from outside the neighborhood. Hosted by <a href="https://pioneerworks.org/about/">Pioneer Works</a>, an organization in support of collaboration, art, and education for the community, about 100 hackers descended on the waterfront to tackle topics such as flood emergency response, lighting infrastructure, crime, and citizen outreach. Using scriptr.io as a backbone, my team (<a href="https://twitter.com/edborden">Ed Borden</a> and <a href="https://twitter.com/AAAndy_An">Andy An</a>, in conjunction with <a href="http://portsidenewyork.org/">PortSide New York</a>) was able to bring home the "Best in Transportation" prize for <a href="http://highground.nyc">HighGround.nyc</a>, a system that manages vehicle evacuation during emergency flooding situations. Read on for more!
 
 <img class="aligncenter size-full wp-image-2552" src="https://blog.scriptr.io/wp-content/uploads/2016/06/c33a726c-c768-45b7-891d-54ac3e741d35.jpg" alt="c33a726c-c768-45b7-891d-54ac3e741d35" width="972" height="547" />
